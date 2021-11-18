@@ -2,6 +2,7 @@
 Logo et titres: Shrikhand
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* color */
 /* 
 nuance grey: #EAEAEA
@@ -24,18 +25,21 @@ h2 {
   margin: 0%;
 }
 
+h3 {
+  font-size: large;
+  margin: 0%;
+}
+
 body {
   margin: 0%;
 }
 
 header {
-  width: 100%;
   height: 100px;
   display: flex;
   flex-direction: column;
 }
 header .bl_logo {
-  width: 100%;
   height: 60%;
   display: flex;
   align-items: center;
@@ -47,7 +51,6 @@ header .bl_logo .logo {
   height: 100%;
 }
 header .localisation {
-  width: 100%;
   height: 50%;
   background-color: #EAEAEA;
   display: flex;
@@ -55,12 +58,15 @@ header .localisation {
   justify-content: center;
   padding: 2%;
 }
+header .localisation__icon {
+  padding: 2%;
+}
 header .localisation input {
-  width: 50%;
+  width: 45%;
   border: none;
   background-color: transparent;
   padding: 2%;
-  font-size: 16px;
+  font-size: small;
   outline: 0px;
   font-weight: 500;
 }
@@ -77,7 +83,7 @@ header .localisation input {
 .explore p {
   font-weight: 300;
 }
-.explore .btn_explore {
+.explore__btn {
   padding: 5%;
   border-radius: 40px;
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 90%);
@@ -85,6 +91,7 @@ header .localisation input {
   color: white;
   font-weight: 500;
   box-shadow: 1px 1px 10px grey;
+  font-size: 15px;
 }
 
 .process {
@@ -94,22 +101,22 @@ header .localisation input {
   padding: 10% 5%;
   justify-content: space-between;
 }
-.process .process__bl {
+.process__bl {
   background-color: #F6F6F6;
   border-radius: 15px;
-  padding: 4%;
   box-shadow: 2px 2px 15px -5px grey;
 }
-.process .process__bl .process__step {
+.process__bl .step {
   display: flex;
-  gap: 10%;
+  gap: 5%;
+  padding: 4%;
   font-size: 15px;
   align-items: center;
   width: 100%;
   position: relative;
   right: 25px;
 }
-.process .process__bl .process__step .step-number {
+.process__bl .step__number {
   border-radius: 50%;
   background-color: #9356DC;
   color: #fff;
@@ -121,20 +128,69 @@ header .localisation input {
   text-align: center;
   font-size: 12px;
 }
-.process .process__bl .process__step .process_icon {
+.process__bl .step__icon {
   width: 20px;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   color: grey;
 }
 
-img {
-  height: 150px;
+.restaurants {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15% 5%;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  height: 250px;
+  margin: 3% 0%;
+  display: flex;
+  flex-direction: column;
+}
+.card__head {
+  width: 100%;
+  height: 70%;
+}
+.card__head__img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 3%;
+  flex-grow: 1;
 }
 
 footer {
-  background-color: grey;
+  background: #323232;
+  color: #fff;
+  padding: 5%;
+}
+
+.footer1__title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 20px;
+}
+.footer1__body {
+  list-style: none;
+  padding-left: 0%;
+}
+.footer1__body li {
+  margin: 2%;
+  font-size: 14px;
+}
+.footer1__body li .footer1__icon {
+  width: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
