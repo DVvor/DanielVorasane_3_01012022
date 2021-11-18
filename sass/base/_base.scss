@@ -1,0 +1,35 @@
+/* color */
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-accent: #99E2D0;
+$colour-white: #fff;
+$colour-grey: #F6F6F6;
+
+/* 
+nuance grey: #EAEAEA
+             #F6F6F6
+*/
+
+html
+{
+    font-family: "Roboto", sans-serif;    
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: x-large;
+    margin: 0%;
+}
+h2 {
+    font-size: x-large;
+    margin: 0%;
+}
+h3 {
+    font-size: large;
+    margin: 0%;
+}
+body {
+    margin: 0%;
+}

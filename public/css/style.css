@@ -1,13 +1,10 @@
-/* font "Roboto" via google fonts 
-Logo et titres: Shrikhand
-*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* color */
 /* 
 nuance grey: #EAEAEA
              #F6F6F6
 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html {
   font-family: "Roboto", sans-serif;
   max-width: 640px;
@@ -34,8 +31,10 @@ body {
   margin: 0%;
 }
 
+/* font "Roboto" via google fonts 
+Logo et titres: Shrikhand
+*/
 header {
-  height: 100px;
   display: flex;
   flex-direction: column;
 }
@@ -179,7 +178,7 @@ footer {
 
 .footer1__title {
   font-family: "Shrikhand", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 .footer1__body {
   list-style: none;
@@ -187,10 +186,127 @@ footer {
 }
 .footer1__body li {
   margin: 2%;
-  font-size: 14px;
+  font-size: 12px;
 }
 .footer1__body li .footer1__icon {
   width: 25px;
+}
+
+.menu {
+  background-color: #F6F6F6;
+}
+.menu__img img {
+  width: 100%;
+  height: 200px;
+}
+.menu__body {
+  position: relative;
+  bottom: 40px;
+  background-color: #F6F6F6;
+  border-radius: 30px 30px 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.menu__body__title {
+  padding: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__body__title h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+.menu__body .starters {
+  margin: 5%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu__body .starters h2 {
+  font-size: medium;
+  font-weight: lighter;
+}
+.menu__body .starters__one, .menu__body .starters__two, .menu__body .starters__three, .menu__body .starters__four {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2%;
+  padding-right: 5%;
+  font-size: 12px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu__body .starters__one h3, .menu__body .starters__two h3, .menu__body .starters__three h3, .menu__body .starters__four h3 {
+  font-size: 14px;
+  width: 100%;
+}
+.menu__body .dishes {
+  margin: 5%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu__body .dishes h2 {
+  font-size: medium;
+  font-weight: lighter;
+}
+.menu__body .dishes__one, .menu__body .dishes__two, .menu__body .dishes__three {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2%;
+  padding-right: 5%;
+  font-size: 12px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu__body .dishes__one h3, .menu__body .dishes__two h3, .menu__body .dishes__three h3 {
+  font-size: 14px;
+  width: 100%;
+}
+.menu__body .desserts {
+  margin: 5%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu__body .desserts h2 {
+  font-size: medium;
+  font-weight: lighter;
+}
+.menu__body .desserts__one, .menu__body .desserts__two, .menu__body .desserts__three {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2%;
+  padding-right: 5%;
+  font-size: 12px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu__body .desserts__one h3, .menu__body .desserts__two h3, .menu__body .desserts__three h3 {
+  font-size: 14px;
+  width: 100%;
+}
+.menu__body .order {
+  display: flex;
+  justify-content: center;
+  margin: 10% 5%;
+}
+.menu__body .order__btn {
+  padding: 5% 15%;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 90%);
+  border: 0px;
+  color: white;
+  box-shadow: 1px 1px 10px grey;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
