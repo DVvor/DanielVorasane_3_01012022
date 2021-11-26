@@ -39,16 +39,16 @@ header {
   flex-direction: column;
 }
 header .bl_logo {
-  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2%;
   position: relative;
+  box-shadow: 1px 1px 2px grey;
+  height: 40px;
 }
 header .bl_logo .logo {
   width: 50%;
-  height: 100%;
 }
 header .bl_logo .btn_back {
   background-color: transparent;
@@ -100,6 +100,7 @@ header .localisation input {
   font-size: 15px;
   position: relative;
   z-index: 1;
+  transition: all 250ms;
 }
 .explore__btn:active {
   transform: scale(0.98);
@@ -118,7 +119,6 @@ header .localisation input {
   border: 2px solid #ff46cc;
   opacity: 0;
   z-index: -1;
-  transition: all 250ms;
 }
 
 .process {
@@ -133,18 +133,34 @@ header .localisation input {
   border-radius: 15px;
   box-shadow: 2px 2px 15px -5px grey;
   margin-left: 15px;
-}
-.process__bl .step {
   display: flex;
-  gap: 5%;
-  padding: 4%;
-  font-size: 15px;
   align-items: center;
-  width: 100%;
+  padding: 5%;
+  font-size: 14px;
   position: relative;
-  right: 25px;
+  z-index: 1;
 }
-.process__bl .step__number {
+.process__bl:active::after {
+  opacity: 1;
+  transition: all 250ms;
+}
+.process__bl:active > .process__bl__icon {
+  transition: all 250ms;
+  color: #9356DC;
+}
+.process__bl::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  opacity: 0;
+  z-index: -1;
+  background-color: #e4d5f6;
+  border-radius: 15px;
+}
+.process__bl__number {
   border-radius: 50%;
   background-color: #9356DC;
   color: #fff;
@@ -153,28 +169,18 @@ header .localisation input {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   font-size: 12px;
+  position: relative;
+  right: 30px;
 }
-.process__bl .step__icon {
+.process__bl__icon {
   width: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: grey;
   position: relative;
-  z-index: 1;
-}
-.process__bl .step__icon:hover::after {
-  opacity: 1;
-}
-.process__bl .step__icon::after {
-  content: "";
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-  transition: all 250ms;
-  color: #9356DC;
+  right: 20px;
 }
 
 .restaurants {
@@ -192,17 +198,18 @@ header .localisation input {
   margin: 3% 0%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-.card a {
-  text-decoration: none;
-  color: #000;
+.card__link {
+  display: block;
+  position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 .card__head {
   width: 100%;
   height: 70%;
-  position: relative;
 }
 .card__head__img {
   width: 100%;
@@ -228,17 +235,35 @@ header .localisation input {
   float: right;
   font-size: 28px;
   margin-right: 5px;
+  position: relative;
+  z-index: 1;
 }
-.card__body .icon-heart-right :active {
-  font-weight: 900;
+.card__body .icon-heart-right:active {
   background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
-  transition: all 0.9s ease-in-out;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-.card:hover {
-  opacity: 0.7;
-  filter: drop-shadow(0 0 0.75rem grey);
-  transition: 0.5s all ease-in-out;
+.card__body .icon-heart-right:active::after {
+  opacity: 1;
+}
+.card__body .icon-heart-right::after {
+  content: "\f004";
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  left: 0%;
+  right: 0%;
+  font-size: 28px;
+  opacity: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 250ms;
 }
 
 footer {
@@ -299,11 +324,34 @@ footer {
   border: 0px;
   font-size: 28px;
   background-color: transparent;
+  position: relative;
 }
-.menu__body__title .menu__body__icon :hover {
-  font-weight: 900;
+.menu__body__title .menu__body__icon:active {
   background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
-  transition: all 0.9s ease-in-out;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__body__title .menu__body__icon:active::after {
+  opacity: 1;
+}
+.menu__body__title .menu__body__icon::after {
+  content: "\f004";
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 28px;
+  opacity: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 250ms;
 }
 .menu__body .starters {
   margin: 5%;

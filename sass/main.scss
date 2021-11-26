@@ -29,15 +29,15 @@ header {
     display: flex;
     flex-direction: column;
     .bl_logo {
-        height: 60%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 2%;
         position: relative;
+        box-shadow: 1px 1px 2px grey;
+        height: 40px;
         .logo {
             width: 50%;
-            height: 100%;
         }
         .btn_back {
             background-color: transparent;
@@ -89,6 +89,7 @@ header {
         font-size: 15px;
         position: relative;
         z-index: 1;
+        transition: all 250ms;
         &:active {
             transform: scale(0.98);
         }
@@ -106,7 +107,6 @@ header {
                 border: 2px solid darken($colour-secondary, 10);
                 opacity: 0;
                 z-index: -1;
-                transition: all 250ms;
         }
     }
 }
@@ -122,49 +122,68 @@ header {
         border-radius: 15px;
         box-shadow: 2px 2px 15px -5px grey;
         margin-left: 15px;
-        .step {
-            display: flex;
-            gap: 5%;
-            padding: 4%;
-            font-size: 15px;
-            align-items: center;
-            width: 100%;
-            position: relative;
-            right: 25px;
-            &__number {
-                border-radius: 50%;
-                background-color: $colour-primary;
-                color: $colour-white;
-                width: 25px;
-                height: 25px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                font-size: 12px;
-            }
-            &__icon {
-                width: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: grey;
-                position: relative;
-                z-index: 1;
-                &:hover::after {
-                    opacity: 1;
-                }
-                &::after {
-                        content: "";
-                        position: absolute;
-                        opacity: 0;
-                        z-index: -1;
-                        transition: all 250ms;
-                        color: $colour-primary;
-                }
-            }
+        display: flex;
+        align-items: center;
+        padding: 5%;
+        font-size: 14px;
+        position: relative;
+        z-index: 1;
+        &:active::after {
+            opacity: 1;
+            transition: all 250ms;
         }
-    }   
+        &:active > .process__bl__icon {
+            transition: all 250ms;
+            color: $colour-primary;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0%;
+            bottom: 0%;
+            left:0%;
+            right: 0%;
+            opacity: 0;
+            z-index: -1;
+            background-color: lighten($colour-primary, 30);
+            border-radius: 15px; 
+        }
+        &__number {
+            border-radius: 50%;
+            background-color: $colour-primary;
+            color: $colour-white;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            position: relative;
+            right: 30px;
+        }
+        &__icon {
+            width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: grey;
+            position: relative;
+            right: 20px;
+            // &::after {
+            //      content: "";
+            //      font-family: "Font Awesome 5 Free";
+            //      font-weight: 400;
+            //      position: absolute;
+            //      top: 0%;
+            //      bottom: 0%;
+            //      left:0%;
+            //      right: 0%;
+            //      opacity: 0;
+            //      z-index: -1;
+            //      color: red;
+            //  }    
+        }
+    } 
 }
 
 .restaurants {
@@ -175,22 +194,23 @@ header {
     padding: 15% 5%;
 }    
 .card {
-    a {
-        text-decoration: none;
-        color: #000;
-        width: 100%;
-        height: 100%;
-    }
     background-color: $colour-white;
     border-radius: 20px;
     height: 250px;
     margin: 3% 0%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    &__link   {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
     &__head {
         width: 100%;
         height: 70%;
-        position: relative;
         &__img {
             width: 100%;
             height: 100%;
@@ -215,20 +235,38 @@ header {
             float: right;
             font-size: 28px;
             margin-right: 5px;
-            :active {
-                font-weight: 900;
+            position: relative;
+            z-index: 1;
+            &:active {
                 background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
-                transition:all 0.9s ease-in-out;
-                }
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
-        }
+            &:active::after {
+                opacity: 1;
+                }
+            &::after {
+            content: "\f004";
+            font-family: "font Awesome 5 free";
+            font-weight: 900;
+            position: absolute;
+            top: 1px;
+            bottom: 0;
+            left:0%;
+            right: 0%;
+            font-size: 28px;
+            opacity: 0;
+            z-index: 1;
+            background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: opacity 250ms;
+            }
+        }    
+    }    
 }
-.card:hover {
-        opacity: 0.7;
-        filter: drop-shadow(0 0 0.75rem grey);
-        transition: 0.5s all ease-in-out;
-}
-
 footer {
     background: rgb(50,50,50);
     color: $colour-white;
@@ -287,10 +325,33 @@ footer {
                 border: 0px;
                 font-size: 28px;
                 background-color: transparent;
-                :hover {
-                    font-weight: 900;
+                position: relative;
+                &:active {
                     background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
-                    transition:all 0.9s ease-in-out;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    }
+                &:active::after {
+                    opacity: 1;
+                    }
+                &::after {
+                content: "\f004";
+                font-family: "font Awesome 5 free";
+                font-weight: 900;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left:0;
+                right: 0;
+                font-size: 28px;
+                opacity: 0;
+                z-index: 1;
+                background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: opacity 250ms;
                 }
             }           
         }
