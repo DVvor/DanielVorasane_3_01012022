@@ -19,7 +19,7 @@ h1 {
 
 h2 {
   font-size: x-large;
-  margin: 0%;
+  margin: 5% 0%;
 }
 
 h3 {
@@ -363,6 +363,18 @@ footer {
 .menu__body .starters h2 {
   font-size: medium;
   font-weight: lighter;
+  position: relative;
+}
+.menu__body .starters h2::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #96dcd2;
 }
 .menu__body .starters__one, .menu__body .starters__two, .menu__body .starters__three, .menu__body .starters__four {
   background-color: #fff;
@@ -393,6 +405,18 @@ footer {
 .menu__body .dishes h2 {
   font-size: medium;
   font-weight: lighter;
+  position: relative;
+}
+.menu__body .dishes h2::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #96dcd2;
 }
 .menu__body .dishes__one, .menu__body .dishes__two, .menu__body .dishes__three {
   background-color: #fff;
@@ -420,6 +444,18 @@ footer {
 .menu__body .desserts h2 {
   font-size: medium;
   font-weight: lighter;
+  position: relative;
+}
+.menu__body .desserts h2::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #96dcd2;
 }
 .menu__body .desserts__one, .menu__body .desserts__two, .menu__body .desserts__three {
   background-color: #fff;
@@ -450,6 +486,27 @@ footer {
   color: white;
   box-shadow: 1px 1px 10px grey;
   font-size: 15px;
+  position: relative;
+  z-index: 1;
+  transition: all 250ms;
+}
+.menu__body .order__btn:active {
+  transform: scale(0.98);
+}
+.menu__body .order__btn:active::after {
+  opacity: 1;
+}
+.menu__body .order__btn::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  border-radius: 40px;
+  border: 2px solid #ff46cc;
+  opacity: 0;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */
