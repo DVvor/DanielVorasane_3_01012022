@@ -68,7 +68,6 @@ header {
         justify-content: center;
         padding: 2%;
         position: relative;
-        box-shadow: 1px 1px 2px grey;
         height: 40px;
         .logo {
             max-width: 150px;
@@ -88,6 +87,7 @@ header {
         align-items: center;
         justify-content: center;
         padding: 2%;
+        box-shadow: inset 0px 2px 1px grey;
         &__icon {
             padding: 2%;
         }
@@ -542,20 +542,30 @@ footer {
 /* style tablet */
 @media screen and (min-width: 768px) and (max-width: 991px)
 {
-// .localisation {
-//     &__icon {
-//         font-size: large;
-//     }
-//     input {
-//         font-size: large;
-//     }
-// }
+header {
+    .localisation {
+        justify-content:flex-start;
+        padding: 2% 5%;
+        &__icon {
+            font-size: 20px;
+        }
+        input {
+            font-size:large;
+            width: 100%;
+        }
+    }
+
+}
+
 .explore {
     h1 {
         font-size: xx-large;
     }
     p {
         font-size: 20px;
+    }
+    &__btn {
+        font-size: large;
     }
 }
 .process {

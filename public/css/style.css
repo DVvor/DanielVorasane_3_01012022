@@ -75,7 +75,6 @@ header .bl_logo {
   justify-content: center;
   padding: 2%;
   position: relative;
-  box-shadow: 1px 1px 2px grey;
   height: 40px;
 }
 header .bl_logo .logo {
@@ -95,6 +94,7 @@ header .localisation {
   align-items: center;
   justify-content: center;
   padding: 2%;
+  box-shadow: inset 0px 2px 1px grey;
 }
 header .localisation__icon {
   padding: 2%;
@@ -547,11 +547,26 @@ footer {
 
 /* style tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  header .localisation {
+    justify-content: flex-start;
+    padding: 2% 5%;
+  }
+  header .localisation__icon {
+    font-size: 20px;
+  }
+  header .localisation input {
+    font-size: large;
+    width: 100%;
+  }
+
   .explore h1 {
     font-size: xx-large;
   }
   .explore p {
     font-size: 20px;
+  }
+  .explore__btn {
+    font-size: large;
   }
 
   .process {
