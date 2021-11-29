@@ -41,9 +41,9 @@ nuance grey: #EAEAEA
 */
 html {
   font-family: "Roboto", sans-serif;
-  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 767px;
 }
 
 h1 {
@@ -79,13 +79,13 @@ header .bl_logo {
   height: 40px;
 }
 header .bl_logo .logo {
-  width: 50%;
+  max-width: 150px;
 }
 header .bl_logo .btn_back {
   background-color: transparent;
   border: 0px;
-  position: relative;
-  right: 70%;
+  position: absolute;
+  right: 90%;
   color: #000;
 }
 header .localisation {
@@ -354,6 +354,7 @@ footer {
 }
 .menu__body__title h1 {
   font-family: "Shrikhand", sans-serif;
+  font-size: large;
 }
 .menu__body__title .menu__body__icon {
   border: 0px;
@@ -545,5 +546,63 @@ footer {
 }
 
 /* style tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .explore h1 {
+    font-size: xx-large;
+  }
+  .explore p {
+    font-size: 20px;
+  }
+
+  .process {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5%;
+  }
+  .process h2 {
+    width: 100%;
+    margin: 0%;
+    height: max-content;
+  }
+  .process .process__bl {
+    height: 50%;
+    width: 30%;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 0%;
+  }
+  .process .process__bl__number {
+    right: 0%;
+    bottom: 25px;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+  }
+  .process .process__bl__icon {
+    margin: 5% 0%;
+    font-size: 40px;
+  }
+  .process .process__bl__step {
+    font-size: 16px;
+  }
+
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+    padding: 5%;
+    justify-content: space-around;
+  }
+  .restaurants h2 {
+    width: 100%;
+    height: max-content;
+    margin: 0%;
+  }
+
+  .card {
+    width: 45%;
+    height: 40%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
