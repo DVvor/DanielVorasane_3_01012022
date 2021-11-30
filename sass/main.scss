@@ -325,20 +325,22 @@ footer {
 
 .menu {
     background-color: $colour-grey;
+    height: 1300px;
     &__img {
+        height: 15%;
         img {
             width: 100%;
-            height: 200px;
+            height: 100%;
         }
     }
     &__body {
-        height: 1000px;
         position: relative;
         bottom: 40px;
         background-color: $colour-grey;
         border-radius: 30px 30px 0px 0px;
         display: flex;
         flex-direction: column;
+        height: 80%;
         &__title {
             padding: 7%;
             display: flex;
@@ -387,7 +389,8 @@ footer {
             // height: 200px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            height: 25%;
+            gap: 5%; // same space between starters
             h2 {
                 font-size: medium;
                 font-weight: lighter;
@@ -407,29 +410,29 @@ footer {
             &__one, &__two, &__three,&__four {
                 background-color: $colour-white;
                 border-radius: 10px;
-                padding: 2%;
+                padding-left: 2%;
                 padding-right: 5%;
+                height: 20%;
                 font-size: 12px;
-                height: 40px;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                margin: 2% 0%;
-                :hover {
-                    box-shadow:inset -200px 0 0 0 #DEEBFF;
+                align-items: center;
+                align-content: space-evenly;
+                box-shadow: 1px 1px 10px lightgrey;
                 }
                 h3 {
                     font-size: 14px;
                     width: 100%;
                 }
-            } 
         }
         .dishes {
             margin: 5%;
             // height: 200px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 5%;
+            height: 25%;
             h2 {
                 font-size: medium;
                 font-weight: lighter;
@@ -449,14 +452,16 @@ footer {
             &__one, &__two, &__three {
                 background-color: $colour-white;
                 border-radius: 10px;
-                padding: 2%;
+                padding-left: 2%;
                 padding-right: 5%;
+                height: 20%;
                 font-size: 12px;
-                height: 40px;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                margin: 2% 0%;
+                align-items: center;
+                align-content: space-evenly;
+                box-shadow: 1px 1px 10px lightgrey;
                 h3 {
                     font-size: 14px;
                     width: 100%;
@@ -468,7 +473,8 @@ footer {
             // height: 200px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 5%;
+            height: 25%;
             h2 {
                 font-size: medium;
                 font-weight: lighter;
@@ -488,14 +494,16 @@ footer {
             &__one, &__two, &__three {
                 background-color: $colour-white;
                 border-radius: 10px;
-                padding: 2%;
+                padding-left: 2%;
                 padding-right: 5%;
+                height: 20%;
                 font-size: 12px;
-                height: 40px;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                margin: 2% 0%;
+                align-items: center;
+                align-content: space-evenly;
+                box-shadow: 1px 1px 10px lightgrey;
                 h3 {
                     font-size: 14px;
                     width: 100%;
@@ -619,6 +627,11 @@ header {
     width: 45%;
     height: 40%;
 }
+.menu {
+    &__img {
+        height: 30%;
 
+    }
 }
 
+}
