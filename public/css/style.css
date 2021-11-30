@@ -84,7 +84,7 @@ header .bl_logo .btn_back {
   background-color: transparent;
   border: 0px;
   position: absolute;
-  right: 90%;
+  right: 93%;
   color: #000;
 }
 header .localisation {
@@ -123,7 +123,7 @@ header .localisation input {
   font-weight: 300;
 }
 .explore__btn {
-  padding: 5%;
+  padding: 20px 5%;
   border-radius: 40px;
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 90%);
   border: 0px;
@@ -163,7 +163,7 @@ header .localisation input {
 .process__bl {
   background-color: #F6F6F6;
   border-radius: 15px;
-  box-shadow: 2px 2px 15px -5px grey;
+  box-shadow: 1px 1px 10px lightgrey;
   margin-left: 15px;
   height: 20%;
   display: flex;
@@ -229,6 +229,7 @@ header .localisation input {
   height: 20%;
   display: flex;
   flex-direction: column;
+  box-shadow: 1px 1px 10px lightgrey;
   position: relative;
 }
 .card__link {
@@ -333,14 +334,14 @@ footer {
 
 .menu {
   background-color: #F6F6F6;
-  height: 1300px;
 }
 .menu__img {
-  height: 15%;
+  height: 200px;
 }
 .menu__img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .menu__body {
   position: relative;
@@ -349,10 +350,9 @@ footer {
   border-radius: 30px 30px 0px 0px;
   display: flex;
   flex-direction: column;
-  height: 80%;
 }
 .menu__body__title {
-  padding: 7%;
+  padding: 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -398,8 +398,7 @@ footer {
   margin: 5%;
   display: flex;
   flex-direction: column;
-  height: 25%;
-  gap: 5%;
+  gap: 10px;
 }
 .menu__body .starters h2 {
   font-size: medium;
@@ -422,7 +421,7 @@ footer {
   border-radius: 10px;
   padding-left: 2%;
   padding-right: 5%;
-  height: 20%;
+  height: 45px;
   font-size: 12px;
   display: flex;
   flex-wrap: wrap;
@@ -439,8 +438,7 @@ footer {
   margin: 5%;
   display: flex;
   flex-direction: column;
-  gap: 5%;
-  height: 25%;
+  gap: 10px;
 }
 .menu__body .dishes h2 {
   font-size: medium;
@@ -463,7 +461,7 @@ footer {
   border-radius: 10px;
   padding-left: 2%;
   padding-right: 5%;
-  height: 20%;
+  height: 45px;
   font-size: 12px;
   display: flex;
   flex-wrap: wrap;
@@ -480,8 +478,7 @@ footer {
   margin: 5%;
   display: flex;
   flex-direction: column;
-  gap: 5%;
-  height: 25%;
+  gap: 10px;
 }
 .menu__body .desserts h2 {
   font-size: medium;
@@ -504,7 +501,7 @@ footer {
   border-radius: 10px;
   padding-left: 2%;
   padding-right: 5%;
-  height: 20%;
+  height: 45px;
   font-size: 12px;
   display: flex;
   flex-wrap: wrap;
@@ -523,7 +520,7 @@ footer {
   margin: 10% 5%;
 }
 .menu__body .order__btn {
-  padding: 5% 15%;
+  padding: 20px 50px;
   border-radius: 40px;
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 90%);
   border: 0px;
@@ -572,9 +569,6 @@ footer {
   }
   .explore p {
     font-size: 20px;
-  }
-  .explore__btn {
-    font-size: large;
   }
 
   .process {
@@ -628,7 +622,32 @@ footer {
   }
 
   .menu__img {
-    height: 30%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .menu__body {
+    align-items: center;
+  }
+  .menu__body__title {
+    padding: 5%;
+  }
+  .menu__body__title h1 {
+    font-size: xx-large;
+  }
+  .menu__body__icon {
+    left: 140px;
+  }
+  .menu__body .starters {
+    width: 600px;
+    margin: 3%;
+  }
+  .menu__body .dishes {
+    width: 600px;
+    margin: 3%;
+  }
+  .menu__body .desserts {
+    width: 600px;
+    margin: 3%;
   }
 }
 
