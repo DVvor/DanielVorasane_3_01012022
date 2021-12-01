@@ -134,8 +134,13 @@ header .localisation input {
   z-index: 1;
   transition: all 250ms;
 }
-.explore__btn:active {
+.explore__btn:hover {
   transform: scale(0.98);
+  box-shadow: 1px 1px 20px grey;
+}
+.explore__btn:active {
+  transform: scale(0.96);
+  box-shadow: 1px 1px 20px grey;
 }
 .explore__btn:active::after {
   opacity: 1;
@@ -172,12 +177,11 @@ header .localisation input {
   position: relative;
   z-index: 1;
 }
-.process__bl:active::after {
+.process__bl:hover::after, .process__bl:active::after {
   opacity: 1;
-  transition: all 250ms;
+  box-shadow: 1px 1px 30px lightgrey;
 }
-.process__bl:active > .process__bl__icon {
-  transition: all 250ms;
+.process__bl:active > .process__bl__icon, .process__bl:hover > .process__bl__icon {
   color: #9356DC;
 }
 .process__bl::after {
@@ -191,6 +195,7 @@ header .localisation input {
   z-index: -1;
   background-color: #e4d5f6;
   border-radius: 15px;
+  transition: all 250ms;
 }
 .process__bl__number {
   border-radius: 50%;
@@ -231,6 +236,11 @@ header .localisation input {
   flex-direction: column;
   box-shadow: 1px 1px 10px lightgrey;
   position: relative;
+  transition: all 250ms;
+}
+.card:hover {
+  box-shadow: 1px 1px 30px lightgrey;
+  transform: scale(0.98);
 }
 .card__link {
   display: block;
@@ -269,21 +279,25 @@ header .localisation input {
   box-sizing: border-box;
 }
 .card__body .icon-heart-right {
-  font-size: 28px;
+  font-size: 25px;
   margin-right: 2%;
+  width: max-content;
   position: relative;
   z-index: 1;
 }
-.card__body .icon-heart-right:active {
+.card__body .icon-heart-right .fa-heart {
+  font-size: 25px;
+}
+.card__body .icon-heart-right .fa-heart:hover, .card__body .icon-heart-right .fa-heart:active {
   background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.card__body .icon-heart-right:active::after {
+.card__body .icon-heart-right .fa-heart:hover::after, .card__body .icon-heart-right .fa-heart:active::after {
   opacity: 1;
 }
-.card__body .icon-heart-right::after {
+.card__body .icon-heart-right .fa-heart::after {
   content: "\f004";
   font-family: "font Awesome 5 free";
   font-weight: 900;
@@ -292,14 +306,14 @@ header .localisation input {
   bottom: 0;
   left: 0%;
   right: 0%;
-  font-size: 28px;
+  font-size: 25px;
   opacity: 0;
   z-index: 1;
   background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 250ms;
+  transition: opacity 500ms;
 }
 
 footer {
@@ -363,36 +377,38 @@ footer {
 }
 .menu__body__title .menu__body__icon {
   border: 0px;
-  font-size: 28px;
   background-color: transparent;
   position: relative;
 }
-.menu__body__title .menu__body__icon:active {
+.menu__body__title .menu__body__icon .fa-heart {
+  font-size: 25px;
+}
+.menu__body__title .menu__body__icon .fa-heart:hover, .menu__body__title .menu__body__icon .fa-heart:active {
   background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu__body__title .menu__body__icon:active::after {
+.menu__body__title .menu__body__icon .fa-heart:hover::after, .menu__body__title .menu__body__icon .fa-heart:active::after {
   opacity: 1;
 }
-.menu__body__title .menu__body__icon::after {
+.menu__body__title .menu__body__icon .fa-heart::after {
   content: "\f004";
   font-family: "font Awesome 5 free";
   font-weight: 900;
   position: absolute;
-  top: 0;
+  top: 1px;
   bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 28px;
+  left: 0%;
+  right: 0%;
+  font-size: 25px;
   opacity: 0;
   z-index: 1;
   background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 250ms;
+  transition: opacity 500ms;
 }
 .menu__body .starters {
   margin: 5%;
@@ -531,8 +547,13 @@ footer {
   z-index: 1;
   transition: all 250ms;
 }
-.menu__body .order__btn:active {
+.menu__body .order__btn:hover {
   transform: scale(0.98);
+  box-shadow: 1px 1px 20px grey;
+}
+.menu__body .order__btn:active {
+  transform: scale(0.96);
+  box-shadow: 1px 1px 20px grey;
 }
 .menu__body .order__btn:active::after {
   opacity: 1;
@@ -552,15 +573,21 @@ footer {
 
 /* style tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  header .localisation {
-    justify-content: flex-start;
-    padding: 2% 5%;
+  header {
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
   }
-  header .localisation__icon {
-    font-size: 20px;
+  header .bl_logo {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  header .localisation {
+    background-color: transparent;
+    box-shadow: none;
+    justify-content: flex-start;
   }
   header .localisation input {
-    font-size: large;
     width: 100%;
   }
 
@@ -640,17 +667,63 @@ footer {
   .menu__body .starters {
     width: 600px;
     margin: 3%;
+    align-items: center;
+  }
+  .menu__body .starters h2 {
+    width: 90%;
+    text-align: center;
+  }
+  .menu__body .starters h2::after {
+    width: 40%;
+    height: 1px;
+    left: 160px;
+  }
+  .menu__body .starters__one, .menu__body .starters__two, .menu__body .starters__three, .menu__body .starters__four {
+    width: 70%;
+    box-sizing: border-box;
   }
   .menu__body .dishes {
     width: 600px;
     margin: 3%;
+    align-items: center;
+  }
+  .menu__body .dishes h2 {
+    width: 90%;
+    text-align: center;
+  }
+  .menu__body .dishes h2::after {
+    width: 40%;
+    height: 1px;
+    left: 160px;
+  }
+  .menu__body .dishes__one, .menu__body .dishes__two, .menu__body .dishes__three, .menu__body .dishes__four {
+    width: 70%;
+    box-sizing: border-box;
   }
   .menu__body .desserts {
     width: 600px;
     margin: 3%;
+    align-items: center;
+  }
+  .menu__body .desserts h2 {
+    width: 90%;
+    text-align: center;
+  }
+  .menu__body .desserts h2::after {
+    width: 40%;
+    height: 1px;
+    left: 160px;
+  }
+  .menu__body .desserts__one, .menu__body .desserts__two, .menu__body .desserts__three, .menu__body .desserts__four {
+    width: 70%;
+    box-sizing: border-box;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1024px) {
+@media screen and (min-width: 992px) {
+  html {
+    max-width: 1024px;
+  }
+
   header {
     flex-direction: row-reverse;
     width: 100%;
@@ -667,6 +740,13 @@ footer {
   }
   header .localisation input {
     width: 100%;
+  }
+
+  .explore h1 {
+    font-size: xx-large;
+  }
+  .explore p {
+    font-size: 20px;
   }
 
   .process {

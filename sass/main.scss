@@ -125,8 +125,13 @@ header {
         position: relative; // already with position absolute ::after
         z-index: 1;
         transition: all 250ms;
-        &:active {
+        &:hover {
             transform: scale(0.98); // reduce block
+            box-shadow: 1px 1px 20px grey;
+        }
+        &:active{
+            transform: scale(0.96); // reduce block
+            box-shadow: 1px 1px 20px grey;
         }
         &:active::after {
                 opacity: 1;
@@ -163,12 +168,11 @@ header {
         font-size: 14px;
         position: relative;
         z-index: 1;
-        &:active::after {
+        &:hover::after , &:active::after {
             opacity: 1;
-            transition: all 250ms;
+            box-shadow: 1px 1px 30px lightgrey;
         }
-        &:active > .process__bl__icon {
-            transition: all 250ms;
+        &:active > .process__bl__icon, &:hover > .process__bl__icon {
             color: $colour-primary;
         }
         &::after {
@@ -182,6 +186,7 @@ header {
             z-index: -1;
             background-color: lighten($colour-primary, 30);
             border-radius: 15px; 
+            transition: all 250ms;
         }
         &__number {
             border-radius: 50%;
@@ -223,6 +228,12 @@ header {
     flex-direction: column;
     box-shadow: 1px 1px 10px lightgrey;
     position: relative; // add with bl new-restaurant
+    transition: all 250ms ;
+    &:hover {
+        box-shadow: 1px 1px 30px lightgrey;
+        transform: scale(0.98);
+        
+    }
     &__link   {
         display: block;
         position: absolute;
@@ -259,37 +270,42 @@ header {
         padding: 2% 5%;
         box-sizing: border-box; // out of bl 
         .icon-heart-right {
-            font-size: 28px;
+            font-size: 25px;
             margin-right: 2%;
+            width: max-content;
             position: relative;
             z-index: 1;
-            &:active {
+            .fa-heart {
+                font-size: 25px;
+                &:hover , &:active {
+                    background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                &:hover::after , &:active::after {
+                    opacity: 1;
+                    }
+                &::after {
+                content: "\f004";
+                font-family: "font Awesome 5 free";
+                font-weight: 900;
+                position: absolute;
+                top: 1px;
+                bottom: 0;
+                left:0%;
+                right: 0%;
+                font-size: 25px;
+                opacity: 0;
+                z-index: 1;
                 background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-            }
-            &:active::after {
-                opacity: 1;
+                transition: opacity 500ms;
                 }
-            &::after {
-            content: "\f004";
-            font-family: "font Awesome 5 free";
-            font-weight: 900;
-            position: absolute;
-            top: 1px;
-            bottom: 0;
-            left:0%;
-            right: 0%;
-            font-size: 28px;
-            opacity: 0;
-            z-index: 1;
-            background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: opacity 250ms;
             }
+            
         }    
     }    
 }
@@ -352,36 +368,39 @@ footer {
             }
             .menu__body__icon {
                 border: 0px;
-                font-size: 28px;
                 background-color: transparent;
                 position: relative;
-                &:active {
-                    background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                .fa-heart {
+                    font-size: 25px;
+                    &:hover , &:active {
+                        background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        }
+                    &:hover::after , &:active::after {
+                        opacity: 1;
+                        }
+                    &::after {
+                        content: "\f004";
+                        font-family: "font Awesome 5 free";
+                        font-weight: 900;
+                        position: absolute;
+                        top: 1px;
+                        bottom: 0;
+                        left:0%;
+                        right: 0%;
+                        font-size: 25px;
+                        opacity: 0;
+                        z-index: 1;
+                        background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        transition: opacity 500ms;
                     }
-                &:active::after {
-                    opacity: 1;
-                    }
-                &::after {
-                content: "\f004";
-                font-family: "font Awesome 5 free";
-                font-weight: 900;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left:0;
-                right: 0;
-                font-size: 28px;
-                opacity: 0;
-                z-index: 1;
-                background: linear-gradient(90deg, $colour-secondary 0%,$colour-primary 90%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                transition: opacity 250ms;
                 }
+                
             }           
         }
         .starters {
@@ -519,8 +538,13 @@ footer {
                 position: relative;
                 z-index: 1;
                 transition: all 250ms;
-                &:active {
-                    transform: scale(0.98);
+                &:hover {
+                    transform: scale(0.98); // reduce block
+                    box-shadow: 1px 1px 20px grey;
+                }
+                &:active{
+                    transform: scale(0.96); // reduce block
+                    box-shadow: 1px 1px 20px grey;
                 }
                 &:active::after {
                         opacity: 1;
@@ -546,19 +570,22 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 991px)
 {
     header {
+        flex-direction: row-reverse;
+        width: 100%;
+        align-items: center;
+        .bl_logo {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
         .localisation {
-            justify-content:flex-start;
-            padding: 2% 5%;
-            &__icon {
-                font-size: 20px;
-            }
+            background-color: transparent;
+            box-shadow: none;
+            justify-content: flex-start;
             input {
-                font-size:large;
-                width: 100%;
+                width: 100% ;
             }
         }
     }
-
     .explore {
         h1 {
             font-size: xx-large;
@@ -635,20 +662,66 @@ footer {
             .starters {
                 width: 600px;
                 margin: 3%;
+                align-items: center;
+                h2 {
+                    width: 90%;
+                    text-align: center;
+                    &::after {
+                        width: 40%;
+                        height: 1px;
+                        left: 160px;
+                    }
+                }
+                &__one, &__two, &__three, &__four {
+                    width: 70%;
+                    box-sizing: border-box;
+                }
             }
             .dishes {
                 width: 600px;
                 margin: 3%;
+                align-items: center;
+                h2 {
+                    width: 90%;
+                    text-align: center;
+                    &::after {
+                        width: 40%;
+                        height: 1px;
+                        left: 160px;
+                    }
+                }
+                &__one, &__two, &__three, &__four {
+                    width: 70%;
+                    box-sizing: border-box;
+                }
             }
             .desserts {
                 width: 600px;
                 margin: 3%;
+                align-items: center;
+                h2 {
+                    width: 90%;
+                    text-align: center;
+                    &::after {
+                        width: 40%;
+                        height: 1px;
+                        left: 160px;
+
+                    }
+                }
+                &__one, &__two, &__three, &__four {
+                    width: 70%;
+                    box-sizing: border-box;
+                }
             }
         }
     }
 }
-@media screen and (min-width: 992px) and (max-width: 1024px)
+@media screen and (min-width: 992px)
 {
+    html {
+        max-width: 1024px;
+    }
     header {
         flex-direction: row-reverse;
         width: 100%;
@@ -664,6 +737,14 @@ footer {
             input {
                 width: 100% ;
             }
+        }
+    }
+    .explore {
+        h1 {
+            font-size: xx-large;
+        }
+        p {
+            font-size: 20px;
         }
     }
     .process {
