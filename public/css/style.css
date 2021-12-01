@@ -742,9 +742,20 @@ footer {
   .menu__body .starters {
     width: 32%;
     margin: 0;
+    align-items: center;
+  }
+  .menu__body .starters h2 {
+    width: 90%;
+    text-align: center;
+  }
+  .menu__body .starters h2::after {
+    width: 100%;
+    height: 1px;
   }
   .menu__body .starters__one, .menu__body .starters__two, .menu__body .starters__three, .menu__body .starters__four {
-    height: 80px;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
     align-content: space-between;
     padding: 5%;
   }
@@ -754,9 +765,20 @@ footer {
   .menu__body .dishes {
     width: 32%;
     margin: 0;
+    align-items: center;
+  }
+  .menu__body .dishes h2 {
+    width: 90%;
+    text-align: center;
+  }
+  .menu__body .dishes h2::after {
+    width: 100%;
+    height: 1px;
   }
   .menu__body .dishes__one, .menu__body .dishes__two, .menu__body .dishes__three {
-    height: 80px;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
     align-content: space-between;
     padding: 5%;
   }
@@ -766,9 +788,20 @@ footer {
   .menu__body .desserts {
     width: 32%;
     margin: 0;
+    align-items: center;
+  }
+  .menu__body .desserts h2 {
+    width: 90%;
+    text-align: center;
+  }
+  .menu__body .desserts h2::after {
+    width: 100%;
+    height: 1px;
   }
   .menu__body .desserts__one, .menu__body .desserts__two, .menu__body .desserts__three {
-    height: 80px;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
     align-content: space-between;
     padding: 5%;
   }
