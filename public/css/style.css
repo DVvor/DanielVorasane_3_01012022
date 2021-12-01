@@ -650,5 +650,136 @@ footer {
     margin: 3%;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  header {
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+  }
+  header .bl_logo {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  header .localisation {
+    background-color: transparent;
+    box-shadow: none;
+    justify-content: flex-start;
+  }
+  header .localisation input {
+    width: 100%;
+  }
+
+  .process {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5%;
+  }
+  .process h2 {
+    width: 100%;
+    margin: 0%;
+    height: max-content;
+  }
+  .process .process__bl {
+    height: 50%;
+    width: 30%;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 0%;
+  }
+  .process .process__bl__number {
+    right: 0%;
+    bottom: 25px;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+  }
+  .process .process__bl__icon {
+    margin: 5% 0%;
+    font-size: 40px;
+  }
+  .process .process__bl__step {
+    font-size: 16px;
+  }
+
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+    padding: 5%;
+    justify-content: space-around;
+  }
+  .restaurants h2 {
+    width: 100%;
+    height: max-content;
+    margin: 0%;
+  }
+  .restaurants .card {
+    width: 45%;
+    height: 40%;
+  }
+
+  .menu__img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .menu__body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2%;
+    border-radius: 30px;
+    justify-content: space-between;
+  }
+  .menu__body__title {
+    box-sizing: border-box;
+    padding: 5%;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .menu__body__title h1 {
+    font-size: xx-large;
+  }
+  .menu__body .starters {
+    width: 32%;
+    margin: 0;
+  }
+  .menu__body .starters__one, .menu__body .starters__two, .menu__body .starters__three, .menu__body .starters__four {
+    height: 80px;
+    align-content: space-between;
+    padding: 5%;
+  }
+  .menu__body .starters__one span, .menu__body .starters__two span, .menu__body .starters__three span, .menu__body .starters__four span {
+    width: 100%;
+  }
+  .menu__body .dishes {
+    width: 32%;
+    margin: 0;
+  }
+  .menu__body .dishes__one, .menu__body .dishes__two, .menu__body .dishes__three {
+    height: 80px;
+    align-content: space-between;
+    padding: 5%;
+  }
+  .menu__body .dishes__one span, .menu__body .dishes__two span, .menu__body .dishes__three span {
+    width: 100%;
+  }
+  .menu__body .desserts {
+    width: 32%;
+    margin: 0;
+  }
+  .menu__body .desserts__one, .menu__body .desserts__two, .menu__body .desserts__three {
+    height: 80px;
+    align-content: space-between;
+    padding: 5%;
+  }
+  .menu__body .desserts__one span, .menu__body .desserts__two span, .menu__body .desserts__three span {
+    width: 100%;
+  }
+  .menu__body .order {
+    width: 100%;
+    height: max-content;
+    margin: 5%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
