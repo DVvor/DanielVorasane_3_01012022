@@ -403,7 +403,7 @@ footer {
                 
             }           
         }
-        .starters {
+        .dishes {
             margin: 5%;
             display: flex;
             flex-direction: column;
@@ -424,64 +424,70 @@ footer {
                     background-color: rgb(150,220,210);
                     }
             }
-            &__one, &__two, &__three,&__four {
+            &__proposition {
                 background-color: $colour-white;
                 border-radius: 10px;
-                padding-left: 2%;
-                padding-right: 5%;
                 height: 45px;
-                font-size: 12px;
+                width: 100%;
                 display: flex;
-                flex-wrap: wrap;
+                flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                align-content: space-evenly;
+                padding-left: 2%;
                 box-shadow: 1px 1px 10px lightgrey;
-                }
-                h3 {
-                    font-size: 14px;
-                    width: 100%;
-                }
-        }
-        .dishes {
-            margin: 5%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            h2 {
-                font-size: medium;
-                font-weight: lighter;
-                position: relative;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 22px;
-                    bottom: 0;
-                    left:0;
-                    right: 0;
-                    width: 40px;
-                    height: 3px;
-                    background-color: rgb(150,220,210);
+                font-size: 12px;
+                &:active > .dishes__proposition--vd {
+                    visibility: visible;
+                    opacity: 1;
+                    width: 80px;
+                    transition: visibility 0s, width 250ms;
+                    & > .fa-check-circle {
+                        transform: rotate(360deg);
+                        transform-origin: center;
+                        transition: transform 250ms;
                     }
-            }
-            &__one, &__two, &__three {
-                background-color: $colour-white;
-                border-radius: 10px;
-                padding-left: 2%;
-                padding-right: 5%;
-                height: 45px;
-                font-size: 12px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: center;
-                align-content: space-evenly;
-                box-shadow: 1px 1px 10px lightgrey;
-                h3 {
-                    font-size: 14px;
-                    width: 100%;
                 }
-            } 
+                
+                &--txt {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    overflow: hidden;
+                    span {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    h3 {
+                        width: 100%;
+                        font-size: 14px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+                &--price {
+                    height: 30px;
+                    width: 20%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    font-weight: 500;
+                }
+                &--vd{
+                    font-size: 20px;
+                    width: 0px;
+                    height: 100%;
+                    border-radius: 0px 10px 10px 0px ;
+                    background-color: $colour-accent;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
         }
         .desserts {
             margin: 5%;
@@ -504,7 +510,7 @@ footer {
                     background-color: rgb(150,220,210);
                     }
             }
-            &__one, &__two, &__three {
+            &__proposition {
                 background-color: $colour-white;
                 border-radius: 10px;
                 padding-left: 2%;
@@ -672,7 +678,7 @@ footer {
                         left: 160px;
                     }
                 }
-                &__one, &__two, &__three, &__four {
+                &__proposition  {
                     width: 70%;
                     box-sizing: border-box;
                 }
@@ -690,7 +696,7 @@ footer {
                         left: 160px;
                     }
                 }
-                &__one, &__two, &__three, &__four {
+                &__proposition  {
                     width: 70%;
                     box-sizing: border-box;
                 }
@@ -709,7 +715,7 @@ footer {
 
                     }
                 }
-                &__one, &__two, &__three, &__four {
+                &__proposition  {
                     width: 70%;
                     box-sizing: border-box;
                 }
@@ -829,7 +835,7 @@ footer {
                         height: 1px;
                     }
                 }
-                &__one, &__two, &__three, &__four {
+                &__proposition  {
                     height: 100px;
                     width: 100%;
                     box-sizing: border-box;
@@ -853,7 +859,7 @@ footer {
                         height: 1px;
                     }
                 }
-                &__one, &__two, &__three {
+                &__proposition {
                     height: 100px;
                     width: 100%;
                     box-sizing: border-box;
@@ -876,7 +882,7 @@ footer {
                         height: 1px;
                     }
                 }
-                &__one, &__two, &__three {
+                &__proposition {
                     height: 100px;
                     width: 100%;
                     box-sizing: border-box;

@@ -410,46 +410,6 @@ footer {
   -webkit-text-fill-color: transparent;
   transition: opacity 500ms;
 }
-.menu__body .starters {
-  margin: 5%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.menu__body .starters h2 {
-  font-size: medium;
-  font-weight: lighter;
-  position: relative;
-}
-.menu__body .starters h2::after {
-  content: "";
-  position: absolute;
-  top: 22px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 40px;
-  height: 3px;
-  background-color: #96dcd2;
-}
-.menu__body .starters__one, .menu__body .starters__two, .menu__body .starters__three, .menu__body .starters__four {
-  background-color: #fff;
-  border-radius: 10px;
-  padding-left: 2%;
-  padding-right: 5%;
-  height: 45px;
-  font-size: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: space-evenly;
-  box-shadow: 1px 1px 10px lightgrey;
-}
-.menu__body .starters h3 {
-  font-size: 14px;
-  width: 100%;
-}
 .menu__body .dishes {
   margin: 5%;
   display: flex;
@@ -472,23 +432,68 @@ footer {
   height: 3px;
   background-color: #96dcd2;
 }
-.menu__body .dishes__one, .menu__body .dishes__two, .menu__body .dishes__three {
+.menu__body .dishes__proposition {
   background-color: #fff;
   border-radius: 10px;
-  padding-left: 2%;
-  padding-right: 5%;
   height: 45px;
-  font-size: 12px;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  align-content: space-evenly;
+  padding-left: 2%;
   box-shadow: 1px 1px 10px lightgrey;
+  font-size: 12px;
 }
-.menu__body .dishes__one h3, .menu__body .dishes__two h3, .menu__body .dishes__three h3 {
-  font-size: 14px;
+.menu__body .dishes__proposition:active > .dishes__proposition--vd {
+  visibility: visible;
+  opacity: 1;
+  width: 80px;
+  transition: visibility 0s, width 250ms;
+}
+.menu__body .dishes__proposition:active > .dishes__proposition--vd > .fa-check-circle {
+  transform: rotate(360deg);
+  transform-origin: center;
+  transition: transform 250ms;
+}
+.menu__body .dishes__proposition--txt {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.menu__body .dishes__proposition--txt span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__body .dishes__proposition--txt h3 {
+  width: 100%;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__body .dishes__proposition--price {
+  height: 30px;
+  width: 20%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-weight: 500;
+}
+.menu__body .dishes__proposition--vd {
+  font-size: 20px;
+  width: 0px;
+  height: 100%;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #99E2D0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
 }
 .menu__body .desserts {
   margin: 5%;
@@ -512,7 +517,7 @@ footer {
   height: 3px;
   background-color: #96dcd2;
 }
-.menu__body .desserts__one, .menu__body .desserts__two, .menu__body .desserts__three {
+.menu__body .desserts__proposition {
   background-color: #fff;
   border-radius: 10px;
   padding-left: 2%;
@@ -526,7 +531,7 @@ footer {
   align-content: space-evenly;
   box-shadow: 1px 1px 10px lightgrey;
 }
-.menu__body .desserts__one h3, .menu__body .desserts__two h3, .menu__body .desserts__three h3 {
+.menu__body .desserts__proposition h3 {
   font-size: 14px;
   width: 100%;
 }
@@ -678,7 +683,7 @@ footer {
     height: 1px;
     left: 160px;
   }
-  .menu__body .starters__one, .menu__body .starters__two, .menu__body .starters__three, .menu__body .starters__four {
+  .menu__body .starters__proposition {
     width: 70%;
     box-sizing: border-box;
   }
@@ -696,7 +701,7 @@ footer {
     height: 1px;
     left: 160px;
   }
-  .menu__body .dishes__one, .menu__body .dishes__two, .menu__body .dishes__three, .menu__body .dishes__four {
+  .menu__body .dishes__proposition {
     width: 70%;
     box-sizing: border-box;
   }
@@ -714,7 +719,7 @@ footer {
     height: 1px;
     left: 160px;
   }
-  .menu__body .desserts__one, .menu__body .desserts__two, .menu__body .desserts__three, .menu__body .desserts__four {
+  .menu__body .desserts__proposition {
     width: 70%;
     box-sizing: border-box;
   }
@@ -832,14 +837,14 @@ footer {
     width: 100%;
     height: 1px;
   }
-  .menu__body .starters__one, .menu__body .starters__two, .menu__body .starters__three, .menu__body .starters__four {
+  .menu__body .starters__proposition {
     height: 100px;
     width: 100%;
     box-sizing: border-box;
     align-content: space-between;
     padding: 5%;
   }
-  .menu__body .starters__one span, .menu__body .starters__two span, .menu__body .starters__three span, .menu__body .starters__four span {
+  .menu__body .starters__proposition span {
     width: 100%;
   }
   .menu__body .dishes {
@@ -855,14 +860,14 @@ footer {
     width: 100%;
     height: 1px;
   }
-  .menu__body .dishes__one, .menu__body .dishes__two, .menu__body .dishes__three {
+  .menu__body .dishes__proposition {
     height: 100px;
     width: 100%;
     box-sizing: border-box;
     align-content: space-between;
     padding: 5%;
   }
-  .menu__body .dishes__one span, .menu__body .dishes__two span, .menu__body .dishes__three span {
+  .menu__body .dishes__proposition span {
     width: 100%;
   }
   .menu__body .desserts {
@@ -878,14 +883,14 @@ footer {
     width: 100%;
     height: 1px;
   }
-  .menu__body .desserts__one, .menu__body .desserts__two, .menu__body .desserts__three {
+  .menu__body .desserts__proposition {
     height: 100px;
     width: 100%;
     box-sizing: border-box;
     align-content: space-between;
     padding: 5%;
   }
-  .menu__body .desserts__one span, .menu__body .desserts__two span, .menu__body .desserts__three span {
+  .menu__body .desserts__proposition span {
     width: 100%;
   }
   .menu__body .order {
