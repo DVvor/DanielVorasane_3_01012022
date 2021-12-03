@@ -420,6 +420,7 @@ footer {
   font-size: medium;
   font-weight: lighter;
   position: relative;
+  font-size: 14px;
 }
 .menu__body .dishes h2::after {
   content: "";
@@ -445,13 +446,13 @@ footer {
   box-shadow: 1px 1px 10px lightgrey;
   font-size: 12px;
 }
-.menu__body .dishes__proposition:active > .dishes__proposition--vd {
+.menu__body .dishes__proposition:active > .dishes__proposition--vd, .menu__body .dishes__proposition:hover > .dishes__proposition--vd {
   visibility: visible;
   opacity: 1;
   width: 80px;
-  transition: visibility 0s, width 250ms;
+  transition: all 250ms linear;
 }
-.menu__body .dishes__proposition:active > .dishes__proposition--vd > .fa-check-circle {
+.menu__body .dishes__proposition:active > .dishes__proposition--vd > .fa-check-circle, .menu__body .dishes__proposition:hover > .dishes__proposition--vd > .fa-check-circle {
   transform: rotate(360deg);
   transform-origin: center;
   transition: transform 250ms;
@@ -494,46 +495,6 @@ footer {
   align-items: center;
   visibility: hidden;
   opacity: 0;
-}
-.menu__body .desserts {
-  margin: 5%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.menu__body .desserts h2 {
-  font-size: medium;
-  font-weight: lighter;
-  position: relative;
-}
-.menu__body .desserts h2::after {
-  content: "";
-  position: absolute;
-  top: 22px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 40px;
-  height: 3px;
-  background-color: #96dcd2;
-}
-.menu__body .desserts__proposition {
-  background-color: #fff;
-  border-radius: 10px;
-  padding-left: 2%;
-  padding-right: 5%;
-  height: 45px;
-  font-size: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: space-evenly;
-  box-shadow: 1px 1px 10px lightgrey;
-}
-.menu__body .desserts__proposition h3 {
-  font-size: 14px;
-  width: 100%;
 }
 .menu__body .order {
   display: flex;
@@ -669,24 +630,6 @@ footer {
   .menu__body__icon {
     left: 140px;
   }
-  .menu__body .starters {
-    width: 600px;
-    margin: 3%;
-    align-items: center;
-  }
-  .menu__body .starters h2 {
-    width: 90%;
-    text-align: center;
-  }
-  .menu__body .starters h2::after {
-    width: 40%;
-    height: 1px;
-    left: 160px;
-  }
-  .menu__body .starters__proposition {
-    width: 70%;
-    box-sizing: border-box;
-  }
   .menu__body .dishes {
     width: 600px;
     margin: 3%;
@@ -703,25 +646,6 @@ footer {
   }
   .menu__body .dishes__proposition {
     width: 70%;
-    box-sizing: border-box;
-  }
-  .menu__body .desserts {
-    width: 600px;
-    margin: 3%;
-    align-items: center;
-  }
-  .menu__body .desserts h2 {
-    width: 90%;
-    text-align: center;
-  }
-  .menu__body .desserts h2::after {
-    width: 40%;
-    height: 1px;
-    left: 160px;
-  }
-  .menu__body .desserts__proposition {
-    width: 70%;
-    box-sizing: border-box;
   }
 }
 @media screen and (min-width: 992px) {
@@ -824,35 +748,13 @@ footer {
   .menu__body__title h1 {
     font-size: xx-large;
   }
-  .menu__body .starters {
-    width: 32%;
-    margin: 0;
-    align-items: center;
-  }
-  .menu__body .starters h2 {
-    width: 90%;
-    text-align: center;
-  }
-  .menu__body .starters h2::after {
-    width: 100%;
-    height: 1px;
-  }
-  .menu__body .starters__proposition {
-    height: 100px;
-    width: 100%;
-    box-sizing: border-box;
-    align-content: space-between;
-    padding: 5%;
-  }
-  .menu__body .starters__proposition span {
-    width: 100%;
-  }
   .menu__body .dishes {
     width: 32%;
     margin: 0;
     align-items: center;
   }
   .menu__body .dishes h2 {
+    font-size: 16px;
     width: 90%;
     text-align: center;
   }
@@ -861,37 +763,18 @@ footer {
     height: 1px;
   }
   .menu__body .dishes__proposition {
+    padding-left: 5%;
     height: 100px;
     width: 100%;
     box-sizing: border-box;
     align-content: space-between;
-    padding: 5%;
   }
-  .menu__body .dishes__proposition span {
-    width: 100%;
-  }
-  .menu__body .desserts {
-    width: 32%;
-    margin: 0;
-    align-items: center;
-  }
-  .menu__body .desserts h2 {
-    width: 90%;
-    text-align: center;
-  }
-  .menu__body .desserts h2::after {
-    width: 100%;
-    height: 1px;
-  }
-  .menu__body .desserts__proposition {
-    height: 100px;
-    width: 100%;
-    box-sizing: border-box;
-    align-content: space-between;
-    padding: 5%;
-  }
-  .menu__body .desserts__proposition span {
-    width: 100%;
+  .menu__body .dishes__proposition--price {
+    padding-right: 5%;
+    font-size: 14px;
+    width: max-content;
+    display: flex;
+    justify-content: center;
   }
   .menu__body .order {
     width: 100%;

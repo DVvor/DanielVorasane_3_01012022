@@ -412,6 +412,7 @@ footer {
                 font-size: medium;
                 font-weight: lighter;
                 position: relative;
+                font-size: 14px;
                 &::after {
                     content: "";
                     position: absolute;
@@ -436,18 +437,18 @@ footer {
                 padding-left: 2%;
                 box-shadow: 1px 1px 10px lightgrey;
                 font-size: 12px;
-                &:active > .dishes__proposition--vd {
+                &:active > .dishes__proposition--vd,
+                &:hover > .dishes__proposition--vd {
                     visibility: visible;
                     opacity: 1;
                     width: 80px;
-                    transition: visibility 0s, width 250ms;
+                    transition: all 250ms linear;
                     & > .fa-check-circle {
                         transform: rotate(360deg);
                         transform-origin: center;
                         transition: transform 250ms;
                     }
                 }
-                
                 &--txt {
                     width: 100%;
                     display: flex;
@@ -488,46 +489,6 @@ footer {
                     opacity: 0;
                 }
             }
-        }
-        .desserts {
-            margin: 5%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            h2 {
-                font-size: medium;
-                font-weight: lighter;
-                position: relative;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 22px;
-                    bottom: 0;
-                    left:0;
-                    right: 0;
-                    width: 40px;
-                    height: 3px;
-                    background-color: rgb(150,220,210);
-                    }
-            }
-            &__proposition {
-                background-color: $colour-white;
-                border-radius: 10px;
-                padding-left: 2%;
-                padding-right: 5%;
-                height: 45px;
-                font-size: 12px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: center;
-                align-content: space-evenly;
-                box-shadow: 1px 1px 10px lightgrey;
-                h3 {
-                    font-size: 14px;
-                    width: 100%;
-                }
-            } 
         }
         .order {
             display: flex;
@@ -665,24 +626,6 @@ footer {
             &__icon {
                 left: 140px;
             }
-            .starters {
-                width: 600px;
-                margin: 3%;
-                align-items: center;
-                h2 {
-                    width: 90%;
-                    text-align: center;
-                    &::after {
-                        width: 40%;
-                        height: 1px;
-                        left: 160px;
-                    }
-                }
-                &__proposition  {
-                    width: 70%;
-                    box-sizing: border-box;
-                }
-            }
             .dishes {
                 width: 600px;
                 margin: 3%;
@@ -698,26 +641,6 @@ footer {
                 }
                 &__proposition  {
                     width: 70%;
-                    box-sizing: border-box;
-                }
-            }
-            .desserts {
-                width: 600px;
-                margin: 3%;
-                align-items: center;
-                h2 {
-                    width: 90%;
-                    text-align: center;
-                    &::after {
-                        width: 40%;
-                        height: 1px;
-                        left: 160px;
-
-                    }
-                }
-                &__proposition  {
-                    width: 70%;
-                    box-sizing: border-box;
                 }
             }
         }
@@ -823,35 +746,12 @@ footer {
                     font-size: xx-large;
                 }
             }
-            .starters {
-                width: 32%;
-                margin: 0;
-                align-items: center;
-                h2 {
-                    width: 90%;
-                    text-align: center;
-                    &::after {
-                        width: 100%;
-                        height: 1px;
-                    }
-                }
-                &__proposition  {
-                    height: 100px;
-                    width: 100%;
-                    box-sizing: border-box;
-                    align-content: space-between;
-                    padding: 5%;
-                    span {
-                        width: 100%;
-                    }
-                } 
-
-            }
             .dishes {
                 width: 32%;
                 margin: 0;
                 align-items: center;
                 h2 {
+                    font-size: 16px;
                     width: 90%;
                     text-align: center;
                     &::after {
@@ -860,36 +760,17 @@ footer {
                     }
                 }
                 &__proposition {
+                    padding-left: 5%;
                     height: 100px;
                     width: 100%;
                     box-sizing: border-box;
                     align-content: space-between;
-                    padding: 5%;
-                    span {
-                        width: 100%;
-                    }
-                } 
-            }
-            .desserts {
-                width: 32%;
-                margin: 0;
-                align-items: center;
-                h2 {
-                    width: 90%;
-                    text-align: center;
-                    &::after {
-                        width: 100%;
-                        height: 1px;
-                    }
-                }
-                &__proposition {
-                    height: 100px;
-                    width: 100%;
-                    box-sizing: border-box;
-                    align-content: space-between;
-                    padding: 5%;
-                    span {
-                        width: 100%;
+                    &--price {
+                        padding-right: 5%;
+                        font-size: 14px;
+                        width: max-content;
+                        display: flex;
+                        justify-content: center;
                     }
                 } 
             }
