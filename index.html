@@ -8,6 +8,17 @@
    <title>Ohmyfood</title>
 </head>
 <body>
+   <div class="loader-wrapper">
+      <div class="loader-box">
+        <div class="icon">
+          <span>O</span>
+        </div>
+      </div>
+    </div>
+    <script src="functions.js">
+       $(window).load(function() {
+      $(".loader").hide("1000"); })
+    </script>   
    <header>
          <div class="bl_logo">
             <img class="logo" src="public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
@@ -113,6 +124,5 @@
                <li><a class="contact-link" href="mailto:votreadresse@mail.fr">Contact</a></li> 
          </ul>
    </footer>
-   
 </body>
 </html>
