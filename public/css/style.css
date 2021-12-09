@@ -574,12 +574,11 @@ footer {
 
 .loader-wrapper {
   position: fixed;
-  height: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   animation: loader-bg 3s forwards;
   background-color: black;
   opacity: 0.95;
@@ -590,13 +589,16 @@ footer {
   font-size: 2rem;
   font-family: "Shrikhand";
   width: 100%;
-  background: linear-gradient(180deg, #FF79DA 30%, #9356DC 90%);
+  height: 100%;
+  color: black;
+  background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: loaderSize 1.5s 2;
+  animation: loaderSize 1.5s 2 ease-in-out;
 }
 
 @keyframes loader-bg {
@@ -609,23 +611,23 @@ footer {
 }
 @keyframes loaderSize {
   0% {
-    transform: scale(1);
+    transform: scale(1.2);
     visibility: hidden;
   }
   16% {
-    transform: scale(1.2);
-    visibility: visible;
-  }
-  50% {
     transform: scale(1);
     visibility: visible;
   }
-  80% {
+  50% {
     transform: scale(1.2);
     visibility: visible;
   }
+  80% {
+    transform: scale(1);
+    visibility: visible;
+  }
   100% {
-    transform: scale(0.5) rotate3d(1, 0, 0, 1080deg);
+    transform: scale(1.2) rotate3d(1, 0, 0, 2160deg);
     visibility: hidden;
   }
 }
