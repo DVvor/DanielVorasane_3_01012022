@@ -133,6 +133,7 @@ header .localisation input {
   position: relative;
   z-index: 1;
   transition: all 250ms;
+  cursor: pointer;
 }
 .explore__btn:hover {
   transform: scale(0.98);
@@ -237,6 +238,7 @@ header .localisation input {
   box-shadow: 1px 1px 10px lightgrey;
   position: relative;
   transition: all 250ms;
+  cursor: pointer;
 }
 .card:hover {
   box-shadow: 1px 1px 30px lightgrey;
@@ -340,6 +342,10 @@ footer {
 .footer1__body li .contact-link {
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
+}
+.footer1__body li .contact-link:hover, .footer1__body li .contact-link:active {
+  text-decoration: underline;
 }
 
 .fa-hands-helping {
@@ -379,6 +385,7 @@ footer {
   border: 0px;
   background-color: transparent;
   position: relative;
+  cursor: pointer;
 }
 .menu__body__title .menu__body__icon .fa-heart {
   font-size: 25px;
@@ -445,6 +452,7 @@ footer {
   padding-left: 2%;
   box-shadow: 1px 1px 10px lightgrey;
   font-size: 12px;
+  cursor: pointer;
 }
 .menu__body .dishes__proposition:active > .dishes__proposition--vd, .menu__body .dishes__proposition:hover > .dishes__proposition--vd {
   visibility: visible;
@@ -512,6 +520,7 @@ footer {
   position: relative;
   z-index: 1;
   transition: all 250ms;
+  cursor: pointer;
 }
 .menu__body .order__btn:hover {
   transform: scale(0.98);
@@ -587,7 +596,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: loaderSize 1.5s infinite;
+  animation: loaderSize 1.5s 2;
 }
 
 @keyframes loader-bg {
@@ -605,15 +614,19 @@ footer {
   }
   16% {
     transform: scale(1.2);
+    visibility: visible;
   }
   50% {
     transform: scale(1);
+    visibility: visible;
   }
   80% {
     transform: scale(1.2);
+    visibility: visible;
   }
   100% {
     transform: scale(0.5) rotate3d(1, 0, 0, 1080deg);
+    visibility: hidden;
   }
 }
 /* style tablet */

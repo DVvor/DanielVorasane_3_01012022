@@ -125,6 +125,7 @@ header {
         position: relative; // already with position absolute ::after
         z-index: 1;
         transition: all 250ms;
+        cursor: pointer;
         &:hover {
             transform: scale(0.98); // reduce block
             box-shadow: 1px 1px 20px grey;
@@ -229,6 +230,7 @@ header {
     box-shadow: 1px 1px 10px lightgrey;
     position: relative; // add with bl new-restaurant
     transition: all 250ms ;
+    cursor: pointer;
     &:hover {
         box-shadow: 1px 1px 30px lightgrey;
         transform: scale(0.98);
@@ -331,6 +333,10 @@ footer {
             .contact-link {
                 text-decoration: none;
                 color:$colour-white;
+                cursor: pointer;
+                &:hover , &:active {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -370,6 +376,7 @@ footer {
                 border: 0px;
                 background-color: transparent;
                 position: relative;
+                cursor: pointer;
                 .fa-heart {
                     font-size: 25px;
                     &:hover , &:active {
@@ -437,6 +444,7 @@ footer {
                 padding-left: 2%;
                 box-shadow: 1px 1px 10px lightgrey;
                 font-size: 12px;
+                cursor: pointer;
                 &:active > .dishes__proposition--vd,
                 &:hover > .dishes__proposition--vd {
                     visibility: visible;
@@ -505,6 +513,7 @@ footer {
                 position: relative;
                 z-index: 1;
                 transition: all 250ms;
+                cursor: pointer;
                 &:hover {
                     transform: scale(0.98); // reduce block
                     box-shadow: 1px 1px 20px grey;
@@ -574,7 +583,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        animation: loaderSize 1.5s infinite;
+        animation: loaderSize 1.5s 2 ;
 }
 @keyframes loader-bg {
     from { 
@@ -591,15 +600,19 @@ footer {
     }
     16% {
     transform:  scale(1.2);
+    visibility: visible;
     }
     50% {
     transform: scale(1);
+    visibility: visible;
     }
     80% {
     transform:  scale(1.2);
+    visibility: visible;
     }
     100% {
     transform:  scale(0.5) rotate3d(1,0,0 , 1080deg);
+    visibility: hidden;
     }
 }
 
