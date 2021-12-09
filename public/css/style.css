@@ -43,7 +43,7 @@ html {
   font-family: "Roboto", sans-serif;
   margin-left: auto;
   margin-right: auto;
-  max-width: 767px;
+  max-width: 100%;
 }
 
 h1 {
@@ -538,66 +538,70 @@ footer {
 }
 
 @keyframes appear {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(20%);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 .dishes > *:nth-child(1) {
-  animation: appear 0.7s 0.3s backwards;
+  animation: appear 1.5s 0.3s backwards;
 }
 .dishes > *:nth-child(2) {
-  animation: appear 0.7s 0.6s backwards;
+  animation: appear 1.5s 0.6s backwards;
 }
 .dishes > *:nth-child(3) {
-  animation: appear 0.7s 0.9s backwards;
+  animation: appear 1.5s 0.9s backwards;
 }
 .dishes > *:nth-child(4) {
-  animation: appear 0.7s 1.2s backwards;
+  animation: appear 1.5s 1.2s backwards;
 }
 .dishes > *:nth-child(5) {
-  animation: appear 0.7s 1.5s backwards;
+  animation: appear 1.5s 1.5s backwards;
 }
 
 .loader-wrapper {
   position: fixed;
-  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   z-index: 2;
-}
-
-.loader-box {
-  height: 100%;
-  width: 100%;
-  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: loader-bg 3s forwards;
+  background-color: black;
+  opacity: 0.95;
+  font-family: "Shrikhand";
 }
 
 .icon {
-  font-size: 5rem;
+  font-size: 2rem;
   font-family: "Shrikhand";
-  width: 100px;
+  width: 100%;
+  background: linear-gradient(180deg, #FF79DA 30%, #9356DC 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: loaderSize 1.5s infinite ease-in-out;
-  background: linear-gradient(180deg, #FF79DA 30%, #9356DC 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 3rem #FF79DA);
+  animation: loaderSize 1.5s infinite;
 }
 
+@keyframes loader-bg {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
 @keyframes loaderSize {
   0% {
-    transform: scale(1) rotate(360deg);
+    transform: scale(1);
+    visibility: hidden;
   }
   16% {
     transform: scale(1.2);
@@ -609,11 +613,15 @@ footer {
     transform: scale(1.2);
   }
   100% {
-    transform: scale(0.5) rotate3d(0, 1, 0, 720deg);
+    transform: scale(0.5) rotate3d(1, 0, 0, 1080deg);
   }
 }
 /* style tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    max-width: 100%;
+  }
+
   header {
     flex-direction: row-reverse;
     width: 100%;
