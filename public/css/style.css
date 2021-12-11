@@ -547,29 +547,56 @@ footer {
 }
 
 @keyframes appear {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(20%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0%);
   }
 }
+@keyframes btnappear {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.menu__body {
+  animation: appear 1s;
+  animation-delay: 0s;
+}
+
+.order {
+  animation: btnappear 3s;
+}
+
 .dishes > *:nth-child(1) {
-  animation: appear 1.5s 0.3s backwards;
+  animation: appear 0.7s 0.5s both;
 }
 .dishes > *:nth-child(2) {
-  animation: appear 1.5s 0.6s backwards;
+  animation: appear 0.7s 1s both;
 }
 .dishes > *:nth-child(3) {
-  animation: appear 1.5s 0.9s backwards;
+  animation: appear 0.7s 1.5s both;
 }
 .dishes > *:nth-child(4) {
-  animation: appear 1.5s 1.2s backwards;
+  animation: appear 0.7s 2s both;
 }
 .dishes > *:nth-child(5) {
-  animation: appear 1.5s 1.5s backwards;
+  animation: appear 0.7s 2.5s both;
 }
 
 .loader-wrapper {
