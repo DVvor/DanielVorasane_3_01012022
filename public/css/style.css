@@ -7,40 +7,6 @@ nuance grey: #EAEAEA
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html {
   font-family: "Roboto", sans-serif;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h1 {
-  font-size: x-large;
-  margin: 0%;
-}
-
-h2 {
-  font-size: x-large;
-  margin: 5% 0%;
-}
-
-h3 {
-  font-size: large;
-  margin: 0%;
-}
-
-body {
-  margin: 0%;
-}
-
-/* font "Roboto" via google fonts 
-Logo et titres: Shrikhand
-*/
-/* color */
-/* 
-nuance grey: #EAEAEA
-             #F6F6F6
-*/
-html {
-  font-family: "Roboto", sans-serif;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
@@ -65,6 +31,9 @@ body {
   margin: 0%;
 }
 
+/* font "Roboto" via google fonts 
+Logo et titres: Shrikhand
+*/
 header {
   display: flex;
   flex-direction: column;
@@ -228,8 +197,7 @@ header .localisation input {
   padding: 10% 5%;
   height: 1000px;
 }
-
-.card {
+.restaurants .card {
   background-color: #fff;
   border-radius: 20px;
   height: 20%;
@@ -240,29 +208,29 @@ header .localisation input {
   transition: all 250ms;
   cursor: pointer;
 }
-.card:hover {
+.restaurants .card:hover {
   box-shadow: 1px 1px 30px lightgrey;
   transform: scale(0.98);
 }
-.card__link {
+.restaurants .card__link {
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
 }
-.card__head {
+.restaurants .card__head {
   width: 100%;
   height: 70%;
 }
-.card__head__img {
+.restaurants .card__head__img {
   width: 100%;
   height: 100%;
   object-position: center;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-.card__head .new-restaurant {
+.restaurants .card__head .new-restaurant {
   background-color: #96dcd2;
   color: seagreen;
   padding: 2% 5%;
@@ -271,7 +239,7 @@ header .localisation input {
   left: 70%;
   font-size: 12px;
 }
-.card__body {
+.restaurants .card__body {
   height: 100%;
   width: 100%;
   display: flex;
@@ -280,26 +248,26 @@ header .localisation input {
   padding: 2% 5%;
   box-sizing: border-box;
 }
-.card__body .icon-heart-right {
+.restaurants .card__body .icon-heart-right {
   font-size: 25px;
   margin-right: 2%;
   width: max-content;
   position: relative;
   z-index: 1;
 }
-.card__body .icon-heart-right .fa-heart {
+.restaurants .card__body .icon-heart-right .fa-heart {
   font-size: 25px;
 }
-.card__body .icon-heart-right .fa-heart:hover, .card__body .icon-heart-right .fa-heart:active {
+.restaurants .card__body .icon-heart-right .fa-heart:hover, .restaurants .card__body .icon-heart-right .fa-heart:active {
   background: linear-gradient(90deg, #FF79DA 0%, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.card__body .icon-heart-right .fa-heart:hover::after, .card__body .icon-heart-right .fa-heart:active::after {
+.restaurants .card__body .icon-heart-right .fa-heart:hover::after, .restaurants .card__body .icon-heart-right .fa-heart:active::after {
   opacity: 1;
 }
-.card__body .icon-heart-right .fa-heart::after {
+.restaurants .card__body .icon-heart-right .fa-heart::after {
   content: "\f004";
   font-family: "font Awesome 5 free";
   font-weight: 900;
@@ -323,33 +291,31 @@ footer {
   color: #fff;
   padding: 5%;
 }
-
-.footer1__title {
+footer .footer1__title {
   font-family: "Shrikhand", sans-serif;
   font-size: 16px;
 }
-.footer1__body {
+footer .footer1__body {
   list-style: none;
   padding-left: 0%;
 }
-.footer1__body li {
+footer .footer1__body li {
   margin: 2%;
   font-size: 12px;
 }
-.footer1__body li .footer1__icon {
+footer .footer1__body li .fa-hands-helping {
+  font-size: 10px;
+}
+footer .footer1__body li .footer1__icon {
   width: 25px;
 }
-.footer1__body li .contact-link {
+footer .footer1__body li .contact-link {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
 }
-.footer1__body li .contact-link:hover, .footer1__body li .contact-link:active {
+footer .footer1__body li .contact-link:hover, footer .footer1__body li .contact-link:active {
   text-decoration: underline;
-}
-
-.fa-hands-helping {
-  font-size: 10px;
 }
 
 .menu {
@@ -504,12 +470,12 @@ footer {
   visibility: hidden;
   opacity: 0;
 }
-.menu__body .order {
+.menu__body .order-bl {
   display: flex;
   justify-content: center;
   margin: 10% 5%;
 }
-.menu__body .order__btn {
+.menu__body .order-bl__btn {
   padding: 20px 50px;
   border-radius: 40px;
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 90%);
@@ -522,18 +488,18 @@ footer {
   transition: all 250ms;
   cursor: pointer;
 }
-.menu__body .order__btn:hover {
+.menu__body .order-bl__btn:hover {
   transform: scale(0.98);
   box-shadow: 1px 1px 20px grey;
 }
-.menu__body .order__btn:active {
+.menu__body .order-bl__btn:active {
   transform: scale(0.96);
   box-shadow: 1px 1px 20px grey;
 }
-.menu__body .order__btn:active::after {
+.menu__body .order-bl__btn:active::after {
   opacity: 1;
 }
-.menu__body .order__btn::after {
+.menu__body .order-bl__btn::after {
   content: "";
   position: absolute;
   top: 0%;
@@ -546,41 +512,9 @@ footer {
   z-index: -1;
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-@keyframes btnappear {
-  0% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-  80% {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
 .menu__body {
   animation: appear 1s;
   animation-delay: 0s;
-}
-
-.order {
-  animation: btnappear 3s;
 }
 
 .dishes > *:nth-child(1) {
@@ -599,6 +533,38 @@ footer {
   animation: appear 0.7s 2.5s both;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.order-bl {
+  animation: btnappear 3s forwards;
+}
+
+@keyframes btnappear {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 .loader-wrapper {
   position: fixed;
   top: 0;
@@ -649,7 +615,6 @@ footer {
     transform: scale(1);
   }
 }
-/* style tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
   html {
     max-width: 100%;
@@ -724,8 +689,7 @@ footer {
     height: max-content;
     margin: 0%;
   }
-
-  .card {
+  .restaurants .card {
     width: 45%;
     height: 40%;
   }
@@ -892,7 +856,7 @@ footer {
     display: flex;
     justify-content: center;
   }
-  .menu__body .order {
+  .menu__body .order-bl {
     width: 100%;
     height: max-content;
     margin: 5%;

@@ -4,7 +4,6 @@ $colour-secondary: #FF79DA;
 $colour-accent: #99E2D0;
 $colour-white: #fff;
 $colour-grey: #F6F6F6;
-
 /* 
 nuance grey: #EAEAEA
              #F6F6F6
@@ -13,9 +12,9 @@ nuance grey: #EAEAEA
 html
 {
     font-family: "Roboto", sans-serif;    
-    max-width: 640px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
 }
 
 h1 {
