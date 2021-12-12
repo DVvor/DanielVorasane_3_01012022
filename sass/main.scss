@@ -566,17 +566,13 @@ footer {
 //----------- Animation loader-top--------- //
 .loader-wrapper {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     z-index: 2;
     animation: loader-bg 5s forwards;
     background-color: black;
     opacity: 0.95;
-    font-family: "Shrikhand";
-}
-.icon {
+    .icon {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -586,7 +582,9 @@ footer {
         font-size: 2rem;
         font-family: "Shrikhand";
         color: $colour-secondary;   
+    }
 }
+
 
 @keyframes loader-bg {
     from { 
@@ -615,7 +613,6 @@ footer {
 }
 
 //----------- Animation loader-bottom--------- //
-
 
 
 

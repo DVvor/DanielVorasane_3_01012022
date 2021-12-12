@@ -567,18 +567,14 @@ footer .footer1__body li .contact-link:hover, footer .footer1__body li .contact-
 }
 .loader-wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
   animation: loader-bg 5s forwards;
   background-color: black;
   opacity: 0.95;
-  font-family: "Shrikhand";
 }
-
-.icon {
+.loader-wrapper .icon {
   display: flex;
   align-items: center;
   justify-content: center;
