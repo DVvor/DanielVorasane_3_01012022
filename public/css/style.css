@@ -567,23 +567,23 @@ footer .footer1__body li .contact-link:hover, footer .footer1__body li .contact-
 }
 .loader-wrapper {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
-  animation: loader-bg 5s forwards;
-  background-color: black;
+  animation: loader-bg 4s forwards;
+  background-color: #222;
   opacity: 0.95;
-}
-.loader-wrapper .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: loaderSize 1.5s 3.5 ease-in-out;
-  width: 100%;
-  height: 100%;
   font-size: 2rem;
   font-family: "Shrikhand";
   color: #FF79DA;
+}
+.loader-wrapper .icon {
+  animation: loaderSize 1.5s 3 ease-in-out;
 }
 
 @keyframes loader-bg {
@@ -726,7 +726,7 @@ footer .footer1__body li .contact-link:hover, footer .footer1__body li .contact-
 }
 @media screen and (min-width: 992px) {
   html {
-    max-width: 1024px;
+    max-width: 100%;
   }
 
   header {
