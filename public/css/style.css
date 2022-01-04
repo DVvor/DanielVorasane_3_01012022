@@ -107,6 +107,7 @@ header .localisation input {
 .explore__btn:hover {
   transform: scale(0.98);
   box-shadow: 1px 1px 20px grey;
+  background: linear-gradient(180deg, #ff93e1 0%, #a16be0 100%);
 }
 .explore__btn:active {
   transform: scale(0.96);
@@ -491,6 +492,7 @@ footer .footer1__body li .contact-link:hover, footer .footer1__body li .contact-
 .menu__body .order-bl__btn:hover {
   transform: scale(0.98);
   box-shadow: 1px 1px 20px grey;
+  background: linear-gradient(180deg, #ff93e1 0%, #a16be0 100%);
 }
 .menu__body .order-bl__btn:active {
   transform: scale(0.96);

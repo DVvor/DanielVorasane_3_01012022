@@ -97,6 +97,8 @@ header {
         &:hover {
             transform: scale(0.98); // reduce block
             box-shadow: 1px 1px 20px grey;
+            // background: linear-gradient(180deg, lighten(blue, 95%) 5%, lighten(green, 90%) 5%);
+            background: linear-gradient(180deg,lighten($colour-secondary, 5%) 0%,lighten($colour-primary, 5%) 100%);
         }
         &:active{
             transform: scale(0.96); // reduce block
@@ -486,6 +488,7 @@ footer {
                 &:hover {
                     transform: scale(0.98); // reduce block
                     box-shadow: 1px 1px 20px grey;
+                    background: linear-gradient(180deg,lighten($colour-secondary, 5%) 0%,lighten($colour-primary, 5%) 100%);
                 }
                 &:active{
                     transform: scale(0.96); // reduce block
