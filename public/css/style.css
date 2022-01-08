@@ -430,7 +430,7 @@ footer .footer1__body li .contact-link:hover, footer .footer1__body li .contact-
 .menu__body .dishes__proposition:active > .dishes__proposition--vd > .fa-check-circle, .menu__body .dishes__proposition:hover > .dishes__proposition--vd > .fa-check-circle {
   transform: rotate(360deg);
   transform-origin: center;
-  transition: transform 1s;
+  transition: transform 500ms;
 }
 .menu__body .dishes__proposition--txt {
   width: 100%;
